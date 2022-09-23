@@ -21,57 +21,61 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maiores commodi quam consectetur dignissimos placeat aut praesentium vero accusamus sit!</p>
 
       <div id="cards">
-        <div class="card green">
+        <div class="card green" data-card-detail-id="co2-verbrauch">
           <h3 class="card-title">CO2-VERBRAUCH</h3>
-          <img class="card-icon" src="./img/kachel1_co2verbrauch-weiss.svg" alt="CO2-VERBRAUCH ICON">
+          <img class="card-icon" src="./img/kachel1_co2verbrauch-normal.svg" alt="CO2-VERBRAUCH ICON">
           <img class="click-icon" src="./img/kachel-klick-weiss.svg" alt="click icon">
         </div>
 
-        <div class="card dark-blue">
+        <div class="card dark-blue" data-card-detail-id="example-id">
           <h3 class="card-title">WASSER SPAREN</h3>
-          <img class="card-icon" src="./img/kachel2_wasser-weiss.svg" alt="WASSER SPAREN ICON">
+          <img class="card-icon" src="./img/kachel2_wasser-normal.svg" alt="WASSER SPAREN ICON">
           <img class="click-icon" src="./img/kachel-klick-weiss.svg" alt="click icon">
         </div>
 
         <div class="card gold">
           <h3 class="card-title">NACHHALTIGE HAUSER</h3>
-          <img class="card-icon" src="./img/kachel3_nachhaltig-weiss.svg" alt="NACHHALTIGE HAUSER ICON">
+          <img class="card-icon" src="./img/kachel3_nachhaltig-normal.svg" alt="NACHHALTIGE HAUSER ICON">
           <img class="click-icon" src="./img/kachel-klick-weiss.svg" alt="click icon">
         </div>
 
         <div class="card light-blue">
           <h3 class="card-title">WENIGER CHEMIE</h3>
-          <img class="card-icon" src="./img/kachel4_chemie-weiss.svg" alt="WENIGER CHEMIE ICON">
+          <img class="card-icon" src="./img/kachel4_chemie-normal.svg" alt="WENIGER CHEMIE ICON">
           <img class="click-icon" src="./img/kachel-klick-weiss.svg" alt="click icon">
         </div>
 
         <div class="card gold">
           <h3 class="card-title">GESUNDE ERNAHRUNG</h3>
-          <img class="card-icon" src="./img/kachel5_ernaehrung-weiss.svg" alt="GESUNDE ERNAHRUNG ICON">
+          <img class="card-icon" src="./img/kachel5_ernaehrung-normal.svg" alt="GESUNDE ERNAHRUNG ICON">
           <img class="click-icon" src="./img/kachel-klick-weiss.svg" alt="click icon">
         </div>
 
         <div class="card light-blue">
           <h3 class="card-title">IN-HOOUSE GEWACHSHAUSER</h3>
-          <img class="card-icon" src="./img/kachel6_gewaechshaeuser-weiss.svg" alt="IN-HOOUSE GEWACHSHAUSER ICON">
+          <img class="card-icon" src="./img/kachel6_gewaechshaeuser-normal.svg" alt="IN-HOOUSE GEWACHSHAUSER ICON">
           <img class="click-icon" src="./img/kachel-klick-weiss.svg" alt="click icon">
         </div>
 
         <div class="card green">
           <h3 class="card-title">OKO-STROM</h3>
-          <img class="card-icon" src="./img/kachel7_strom-weiss.svg" alt="OKO-STROM ICON">
+          <img class="card-icon" src="./img/kachel7_strom-normal.svg" alt="OKO-STROM ICON">
           <img class="click-icon" src="./img/kachel-klick-weiss.svg" alt="click icon">
         </div>
 
         <div class="card dark-blue">
           <h3 class="card-title">GEGEN DAS BIENENSTERBEN</h3>
-          <img class="card-icon" src="./img/kachel8_bienen-weiss.svg" alt="GEGEN DAS BIENENSTERBEN ICON">
+          <img class="card-icon" src="./img/kachel8_bienen-normal.svg" alt="GEGEN DAS BIENENSTERBEN ICON">
           <img class="click-icon" src="./img/kachel-klick-weiss.svg" alt="click icon">
         </div>
       </div>
 
+
+      <br id="details">
+
       <div id="more-details">
-        <div class="card-detail">
+        <!-- Card Detail for CO2-VERBRAUCH -->
+        <div id="co2-verbrauch" class="card-detail">
           <h3 class="card-detail-title"><span class="gold-text">5x umweltfreundlicher</span> las andere Budget Hotels</h3>
           <div class="card-detail-body">
             <div>
@@ -84,6 +88,21 @@
             <img src="./img/co2-verbrauch-grafik.svg" alt="verbrauch icon">
           </div>
         </div>
+
+        <!-- Card Detail for OTHER CARDS (Example) -->
+        <div id="example-id" class="card-detail">
+          <h3 class="card-detail-title"><span class="gold-text">Lorem ipsum</span> dolor sit amet consectetur.</h3>
+          <div class="card-detail-body">
+            <img src="./img/co2-verbrauch-grafik.svg" alt="verbrauch icon">
+            <div>
+              <h4>Lorem ipsum dolor sit amet.</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p class="green-text">Unser Ziel: CO2 net-zero bis 2025!</p>
+              <span class="percentage green-text">-75%</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -94,16 +113,16 @@
           <input id="fname" type="text" placeholder="Vorname">
           <input id="lname" type="text" placeholder="Nochname">
         </div>
-        <input id="email" type="email" placeholder="E-Mail*">
-        <textarea id="message" placeholder="Deine Idee*" cols="30" rows="6"></textarea>
+        <input id="email" type="email" placeholder="E-Mail*" required>
+        <textarea id="message" placeholder="Deine Idee*" cols="30" rows="6" required></textarea>
 
         <div class="checkbox-list">
           <div class="checkbox">
-            <input type="checkbox" id="dataProtection" name="dataProtection">
+            <input type="checkbox" id="dataProtection" name="dataProtection" required>
             <label for="dataProtection">Ja, ich habe die <span class="gold-text">Datenschutzerklärung</span> gelesen und akzeptiere sie.*</label>
           </div>
           <div class="checkbox">
-            <input type="checkbox" id="conditions" name="conditions">
+            <input type="checkbox" id="conditions" name="conditions" required>
             <label for="conditions">Ja, ich habe die <span class="gold-text">AGB</span> gelesen und akzeptiere sie.*</label>
           </div>
           <div class="checkbox">
@@ -122,6 +141,11 @@
     </div>
   </main>
 
+  <script
+			  src="https://code.jquery.com/jquery-3.6.1.min.js"
+			  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			  crossorigin="anonymous">
+  </script>
   <script src="./js/main.js"></script>
 </body>
 </html>
