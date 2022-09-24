@@ -25,7 +25,7 @@ h2 {
 }
 
 header {
-  background-image: url('../img/green-header-desktop.jpg');
+  background-image: url('../img/green-header-desktop.webp');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -47,7 +47,6 @@ main{
   display: flex;
   flex-direction: column;
   padding: 25px;
-  margin: 0 15%;
   max-width: 1000px;
 }
 
@@ -78,6 +77,11 @@ hr {
   position: relative;
   cursor: pointer;
   color: white;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 25px rgba(18, 21, 26, 0.35);
 }
 
 .card-title {
@@ -114,6 +118,16 @@ hr {
   border: solid 1px #ffcb04;
 }
 
+.green.active,
+.dark-blue.active,
+.light-blue.active,
+.gold.active {
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(24, 31, 44, 0.35);
+  border-width: 2px;
+  transform: scale(1.05);
+}
+
 .green.active {
   color: #23a638;
 }
@@ -127,13 +141,30 @@ hr {
   color: #ffcb04;
 }
 
-.green.active,
-.dark-blue.active,
-.light-blue.active,
-.gold.active {
+.logo {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 210px;
+  color: white;
+}
+
+.logo span {
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
-  border-width: 2px;
+  border: solid 2px rgba(41, 58, 136, 0.315);;
+  color: #293a88f6;
+  border-radius: 20%;
+  width: 80%;
+  height: 80%;
+  box-shadow: 1px 1px 13px rgba(26, 26, 59, 0.15);
 }
 
 
@@ -229,7 +260,7 @@ hr {
 form {
   display: flex;
   flex-direction: column;
-  margin: 15px 0;
+  margin: 15px;
   color: white;
 }
 
@@ -285,4 +316,64 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #e9ab25;
+}
+
+
+/*----------- Media Queries -----------*/
+
+@media only screen and (max-width: 1050px) {
+  header {
+    background-image: url('../img/green-header-mobil.webp');
+  }
+
+  #cards {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .container {
+    margin: 0 5%;
+  }
+  
+}
+
+@media only screen and (max-width: 1022px) {
+  .logo {
+    display: flex;
+  }
+
+  .card-detail-body img {
+    max-width: 40%;
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 777px) {
+  .logo {
+    display: none;
+  }
+
+  .card-detail-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-detail-body div {
+    order: 2;
+  }
+
+  .card-detail-body img {
+    max-width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 533px) {
+  .card {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .container {
+    margin: 0;
+  }
 }
