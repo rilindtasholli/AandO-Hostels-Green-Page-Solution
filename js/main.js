@@ -1,10 +1,11 @@
 $(document).ready(function(){
-  unselectAll();
+  reset();
 
-  //add onclick function for each card
+  //select every card
   $('#cards .card').each(function(){
+    //add onclick function for each card
     $(this).on('click', function(){
-      unselectAll();
+      reset();
 
       // change card to active state
       let currentIconSrc = $(this).children('.card-icon').attr('src'); //get current image source
@@ -19,7 +20,7 @@ $(document).ready(function(){
   })
 });
 
-function unselectAll() {
+function reset() {
   // hide/remove every card-detail
   $('#more-details .card-detail').each(function(){
     $(this).addClass('hidden');
